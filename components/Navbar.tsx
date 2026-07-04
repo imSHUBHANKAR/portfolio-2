@@ -1,18 +1,26 @@
 "use client";
 
+
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Download } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "Work", href: "#" },
-  { name: "Case Studies", href: "#" },
-  { name: "About", href: "#" },
-  { name: "Process", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Home", href: "#home" },
+  { name: "Projects", href: "#projects" },
+  { name: "Case Studies", href: "#case-study" },
+  { name: "Process", href: "#process" },
+  { name: "Skills", href: "#skills" },
+  { name: "About Us", href: "#beyond-pixels" },
+  { name: "Contact Us", href: "#contact" },
 ];
 
+
+
+
 export default function Navbar() {
+    const [activeSection, setActiveSection] = useState("home");
   return (
     <header className="fixed top-0 left-0 z-50 w-full border-b border-gray-200/60 bg-white/80 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
@@ -25,7 +33,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-8 lg:flex">
+        {/* <nav className="hidden items-center gap-8 lg:flex">
           {navLinks.map((item) => (
             <Link
               key={item.name}
@@ -39,13 +47,34 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
-        </nav>
+        </nav> */}
+
+        <nav className="hidden items-center gap-8 lg:flex">
+  {navLinks.map((item) => {
+    const sectionId = item.href.replace("#", "");
+
+    return (
+      <Link
+        key={item.name}
+        href={item.href}
+        onClick={() => setActiveSection(sectionId)}
+        className={`relative text-sm font-medium transition duration-300 ${
+          activeSection === sectionId
+            ? "text-blue-600"
+            : "text-gray-500 hover:text-gray-900"
+        }`}
+      >
+        {item.name}
+
+        {activeSection === sectionId && (
+          <span className="absolute -bottom-2 left-0 h-0.5 w-full rounded-full bg-blue-600"></span>
+        )}
+      </Link>
+    );
+  })}
+</nav>
 
         {/* Resume Button */}
-        {/* <button className="hidden items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-500/30 lg:flex">
-          <Download size={16} />
-          Download Resume
-        </button> */}
         <a
   href="/Shubhankar_Kumar_UIUX_Resume.pdf"
   download="Shubhankar_Kumar_UIUX_Resume.pdf"

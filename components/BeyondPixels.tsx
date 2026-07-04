@@ -45,7 +45,7 @@ const competencies = [
 
 export default function BeyondPixels() {
   return (
-    <section className="bg-[#F8FAFC] py-24">
+    <section id="beyond-pixels" className="bg-[#F8FAFC] py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         {/* Heading */}
 

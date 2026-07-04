@@ -59,7 +59,7 @@ const outcomes = [
 
 export default function CaseStudy() {
   return (
-    <section className="bg-white py-24">
+    <section id="case-study" className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
 
         {/* Heading */}
