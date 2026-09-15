@@ -7,6 +7,8 @@ import {
 } from "lucide-react";
 
 import { FaLinkedin,FaGithub, FaDribbble } from "react-icons/fa";
+import { MorphIcon } from "morphicons/react";
+import { Menu, X } from "lucide"; // data, not components
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -32,7 +34,7 @@ export default function Footer() {
           <div>
 
             <h2 className="text-3xl font-bold">
-              Shubhankar.
+              Shubhankar Kumar
             </h2>
 
             <p className="mt-6 leading-8 text-slate-300">
@@ -117,6 +119,7 @@ export default function Footer() {
               <li>UI Design</li>
               <li>Design Systems</li>
               <li>Product Strategy</li>
+              <li>Wireframing</li>
               <li>Prototyping</li>
 
             </ul>
@@ -138,28 +141,28 @@ export default function Footer() {
             <div className="mt-8 flex gap-4">
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/mrshubhankar/"
                 className="rounded-2xl bg-slate-800 p-4 transition hover:-translate-y-1 hover:bg-blue-600"
               >
                 <FaLinkedin size={20} />
               </a>
 
               <a
-                href="#"
+                href="https://github.com/imSHUBHANKAR"
                 className="rounded-2xl bg-slate-800 p-4 transition hover:-translate-y-1 hover:bg-white hover:text-black"
               >
                 <FaGithub size={20} />
               </a>
 
               <a
-                href="#"
+                href="https://dribbble.com/shubhankar-ux"
                 className="rounded-2xl bg-slate-800 p-4 transition hover:-translate-y-1 hover:bg-pink-600"
               >
                 <FaDribbble size={20} />
               </a>
 
               <a
-                href="#"
+                href="mailto:shubhankar.kr24@gmail.com"
                 className="rounded-2xl bg-slate-800 p-4 transition hover:-translate-y-1 hover:bg-green-600"
               >
                 <Mail size={20} />

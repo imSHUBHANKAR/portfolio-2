@@ -12,6 +12,7 @@ const process = [
   {
     number: "01",
     icon: <Search size={28} />,
+    img: "/PCL.jpg",
     title: "Research",
     description:
       "Understand users, stakeholders and business objectives through interviews, audits, competitor analysis and usability observations.",
@@ -26,6 +27,7 @@ const process = [
   {
     number: "02",
     icon: <Lightbulb size={28} />,
+    img: "/Define.jpg",
     title: "Define",
     description:
       "Transform research findings into clear problem statements, product goals and measurable UX opportunities.",
@@ -40,6 +42,7 @@ const process = [
   {
     number: "03",
     icon: <PencilRuler size={28} />,
+    img: "/Design.jpg",
     title: "Design",
     description:
       "Create wireframes, interactive prototypes and scalable design systems that align user needs with business goals.",
@@ -54,6 +57,7 @@ const process = [
   {
     number: "04",
     icon: <Rocket size={28} />,
+    img: "/PCL.jpg",
     title: "Deliver",
     description:
       "Validate solutions through usability testing, collaborate with developers and continuously improve after launch.",
@@ -119,6 +123,18 @@ export default function Process() {
               >
                 {step.icon}
               </div>
+              <div className="mt-[27px] flex items-center justify-center">
+          <img
+            src={step.img}
+            alt={`${step.title} image`}
+            className="
+              w-[250px]
+              h-[200px]
+              object-contain
+            "
+          />
+          <img src={step.img} alt={`${step.title} logo`} className="w-16 h-16 object-contain"/>
+        </div>
 
               {/* Title */}
 

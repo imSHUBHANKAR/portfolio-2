@@ -6,26 +6,50 @@ import {
   MapPin,
   CheckCircle2,
 } from "lucide-react";
+import Image from "next/image";
 
 const experiences = [
   {
-    company: "GRIHA Council",
+    company: "PloAltoSoft",
     role: "Product Designer",
-    duration: "2023 – Present",
+    duration: "Dec 24 – Present",
+    logo: "/PaloAltoSoft.jpg",
     location: "New Delhi, India",
     current: true,
     responsibilities: [
-      "Designed enterprise sustainability certification platform.",
-      "Created 50+ responsive product screens.",
-      "Built scalable design systems and reusable components.",
-      "Collaborated with developers, product managers and stakeholders.",
-      "Improved complex certification workflows through UX research.",
+      "Designed UI/UX for an enterprise sustainability certification platform",
+      "Designed complex dashboard, appraisal, and data-driven workflows in Figma",
+      "Created responsive screens, wireframes, prototypes, and reusable components",
+      "Simplified complex sustainability and certification processes through user-focused UX design",
+      "Collaborated with developers, product teams, and stakeholders to deliver scalable interfaces",
+      "Improved existing product flows by identifying user pain points and usability issues",
+    ],
+    process:[
+      "UX Research → Information Architecture → User Flows → Wireframing → UI Design → Design System → Prototyping → Edge Cases → Developer Handoff → Stakeholder Collaboration",
     ],
   },
   {
     company: "Freelance",
     role: "UI/UX Designer",
-    duration: "2022 – 2023",
+    duration: "Nov 24 – Present",
+    logo: "/PCL.jpg",
+    location: "Remote",
+    current: false,
+    responsibilities: [
+      "Designed SaaS dashboards and business websites.",
+      "Created mobile-first responsive interfaces.",
+      "Conducted UX audits and usability improvements.",
+      "Delivered high-fidelity prototypes in Figma.",
+    ],
+    process: [
+      "UX Research → Information Architecture → User Flows → Wireframing → UI Design → Design System → Prototyping → Edge Cases → Developer Handoff → Stakeholder Collaboration",
+    ],
+  },
+  {
+    company: "Agsure Innovation Pvt. Ltd.",
+    role: "React.js Intern",
+    duration: "Aug 24 – Oct 24",
+    logo: "/agsure_in_logo.jpg",
     location: "Remote",
     current: false,
     responsibilities: [
@@ -35,6 +59,7 @@ const experiences = [
       "Delivered high-fidelity prototypes in Figma.",
     ],
   },
+  
 ];
 
 export default function Experience() {
@@ -103,10 +128,14 @@ export default function Experience() {
 
                     <div>
 
-                      <div className="flex items-center gap-3">
-
+                      <div className="flex gap-5">
+                        
+                        <img src={job.logo} alt={`${job.company} logo`} className="w-16 h-16 object-contain"/>
+                
+                      <div className="gap-0">
+                        <div className="flex items-center gap-3">
                         <h3 className="text-2xl font-bold text-gray-900">
-                          {job.role}
+                          {job.company}
                         </h3>
 
                         {job.current && (
@@ -116,10 +145,11 @@ export default function Experience() {
                         )}
 
                       </div>
-
-                      <p className="mt-2 text-lg font-semibold text-blue-600">
-                        {job.company}
+                      <p className="text-lg font-semibold text-blue-600">
+                        {job.role}
                       </p>
+                      </div>
+                      </div>
 
                     </div>
 
@@ -174,7 +204,112 @@ export default function Experience() {
           </div>
 
         </div>
+        {/* ////////////// */}
+        {/* <div className="w-full bg-white">
+      
+      <div
+        className="
+          relative
+          w-full
+          min-h-[307px]
+          rounded-[28px]
+          bg-white
+          shadow-[0_8px_25px_rgba(0,0,0,0.14)]
+          flex
+          flex-col
+          items-center
+          justify-center
+          overflow-visible
+        "
+      >
+        
+        <div
+          className="
+            absolute
+            -top-[14px]
+            left-[40px]
+            w-[28px]
+            h-[18px]
+            bg-[#1F3967]
+            rounded-tl-[14px]
+          "
+        />
+
+        
+        <div className="
+            absolute
+            -top-[14px]
+            left-[63px]
+            h-[59px]
+            px-[15px]
+            flex
+            items-center
+            bg-[#2F5596]
+            rounded-bl-[17px]
+            rounded-br-[17px]
+            rounded-tr-[17px]
+          ">
+              <h2 className="text-white
+              text-[21px]
+              leading-none
+              font-semibold
+              tracking-[-0.2px]
+              whitespace-nowrap">
+                Journey
+              </h2>
+        </div>
+
+        
+        <div className="mt-[27px] flex items-center justify-center">
+          <img
+            src="/images/empty-container.png"
+            alt="No data available"
+            className="
+              w-[150px]
+              h-[100px]
+              object-contain
+            "
+          />
+        </div>
+
+        
+        <h3
+          className="
+            mt-[5px]
+            text-[24px]
+            leading-[29px]
+            font-normal
+            text-black
+            tracking-[-0.3px]
+          "
+        >
+          No data available
+        </h3>
+
+        
+        <p
+          className="
+            mt-[12px]
+            text-center
+            text-[21px]
+            leading-[26px]
+            font-normal
+            text-[#657A99]
+            tracking-[-0.15px]
+          "
+        >
+          Submit the required project data
+          <br />
+          to view this metrics
+        </p>
+        
       </div>
+        </div> */}
+        {/* /////////// */}
+      </div>
+
+
+    
     </section>
   );
 }
